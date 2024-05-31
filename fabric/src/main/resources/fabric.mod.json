@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ingameime",
+  "version": "${version}",
+  "name": "ContingameIME",
+  "description": "An unofficial continuation of IngameIME.\nEnable IME in FullScreen Minecraft",
+  "authors": [
+    "ThinkingStudio, TexTrue, Wybxc", "Windmill_City"
+  ],
+  "contact": {
+    "sources": "https://github.com/ThinkingStudios/ContingameIME",
+    "issues": "https://github.com/ThinkingStudios/ContingameIME/issues"
+  },
+  "license": "LGPL-3.0",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "city.windmill.ingameime.fabric.IngameIMEClientFabric"
+      }
+    ]
+  },
+  "mixins": [
+    {
+      "config": "ingameime.fabric.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "minecraft": "1.20.x",
+    "fabricloader": "*",
+    "fabric-key-binding-api-v1": "*",
+    "fabric-language-kotlin": "*",
+    "architectury": "*",
+    "cloth-config": "*"
+  },
+  "recommends": {
+    "satin": "*"
+  }
+}

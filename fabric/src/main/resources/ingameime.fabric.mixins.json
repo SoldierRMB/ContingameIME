@@ -1,0 +1,20 @@
+{
+  "required": false,
+  "plugin": "city.windmill.ingameime.fabric.mixin.MixinConfigPlugin",
+  "minVersion": "0.8",
+  "package": "city.windmill.ingameime.fabric.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "MixinBookEditScreen",
+    "MixinChatScreen",
+    "MixinEditBox",
+    "MixinEditScreen",
+    "MixinFullScreen",
+    "MixinMinecraft",
+    "MixinScreen",
+    "MixinSignEditScreen"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

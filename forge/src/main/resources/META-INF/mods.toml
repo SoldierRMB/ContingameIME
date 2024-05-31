@@ -1,0 +1,41 @@
+modLoader = "kotlinforforge"
+loaderVersion = "*"
+license = "LGPL-3.0"
+
+[[mods]]
+modId = "ingameime"
+version = "${version}"
+displayName = "ContingameIME"
+displayURL = "https://github.com/ThinkingStudios/ContingameIME"
+logoFile = "icon.png"
+credits = "Windmill_City"
+authors = "ThinkingStudio, TexTrue, Wybxc"
+description = '''
+An unofficial continuation of IngameIME.
+
+Enable IME in FullScreen Minecraft
+'''
+
+[[dependencies.ingameime]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20,)"
+ordering = "NONE"
+side = "CLIENT"
+clientSideOnly = true
+
+[[dependencies.ingameime]]
+modId = "architectury"
+mandatory = true
+versionRange = "*"
+ordering = "NONE"
+side = "CLIENT"
+clientSideOnly = true
+
+[[dependencies.ingameime]]
+modId = "cloth_config"
+mandatory = true
+versionRange = "*"
+ordering = "AFTER"
+side = "CLIENT"
+clientSideOnly = true
