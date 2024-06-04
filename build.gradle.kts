@@ -1,9 +1,9 @@
 plugins {
     java
-    id("architectury-plugin") version "3.4-SNAPSHOT"
-    id("dev.architectury.loom") version "1.4-SNAPSHOT" apply false
-    id("me.shedaniel.unified-publishing") version "0.1.+" apply false
-    kotlin("jvm") version "1.9.22" apply false
+    id("architectury-plugin") version "3.4.155"
+    id("dev.architectury.loom") version "1.6.395" apply false
+    id("me.shedaniel.unified-publishing") version "0.1.12" apply false
+    kotlin("jvm") version "2.0.0" apply false
 }
 
 architectury {
@@ -44,7 +44,7 @@ allprojects {
 
     tasks.withType<JavaCompile> {
         options.encoding = "UTF-8"
-        options.release.set(17)
+        options.release.set(21)
     }
 
     java {
@@ -53,10 +53,10 @@ allprojects {
 
     val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
     compileKotlin.kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "21"
     }
     val compileTestKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
     compileTestKotlin.kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "21"
     }
 }

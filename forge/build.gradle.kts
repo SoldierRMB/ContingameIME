@@ -41,11 +41,11 @@ dependencies {
     //Kotlin
     implementation("thedarkcolour:kotlinforforge:${rootProject.property("kotlinforforge_version")}")
     //Architectury API
-    modApi("dev.architectury:architectury-forge:${rootProject.property("architectury_version")}")
+    modApi("dev.architectury:architectury-forge:${rootProject.property("architectury_forge_version")}")
     //REI
-    modImplementation("me.shedaniel:RoughlyEnoughItems-forge:${rootProject.property("rei_version")}")
+    modImplementation("me.shedaniel:RoughlyEnoughItems-forge:${rootProject.property("rei_forge_version")}")
     //Cloth Config
-    modImplementation("me.shedaniel.cloth:cloth-config-forge:${rootProject.property("cloth_config_version")}")
+    modImplementation("me.shedaniel.cloth:cloth-config-forge:${rootProject.property("cloth_config_forge_version")}")
 
     common(project(":common", configuration = "namedElements")) { isTransitive = false }
     shadowCommon(project(":common", configuration = "transformProductionForge")) { isTransitive = false }
