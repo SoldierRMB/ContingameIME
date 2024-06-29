@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     java
     id("architectury-plugin") version "3.4.155"
@@ -35,7 +37,10 @@ allprojects {
     group = rootProject.property("maven_group").toString()
 
     repositories {
-
+        maven {
+            name = "wdsj-io"
+            url = uri("https://repo.wdsj.io/repository/minecraft/")
+        }
     }
 
     dependencies {
@@ -52,11 +57,11 @@ allprojects {
     }
 
     val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
-    compileKotlin.kotlinOptions {
-        jvmTarget = "21"
+    compileKotlin.compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
     val compileTestKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
-    compileTestKotlin.kotlinOptions {
-        jvmTarget = "21"
+    compileTestKotlin.compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }

@@ -32,11 +32,6 @@ ZH-CN / [EN-US](README-EN.md)
 
 ## 依赖
 
-- Forge
-  - [Kotlin for Forge](https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge)
-  - [Cloth Config API (Forge)](https://www.curseforge.com/minecraft/mc-mods/cloth-config)
-  - [Architectury API (Forge)](https://www.curseforge.com/minecraft/mc-mods/architectury-api)
-
 - Fabric
   - [Fabric Language Kotlin](https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin)
   - [Cloth Config API (Fabric)](https://www.curseforge.com/minecraft/mc-mods/cloth-config)

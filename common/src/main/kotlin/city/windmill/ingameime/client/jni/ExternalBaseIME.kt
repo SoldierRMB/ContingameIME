@@ -44,7 +44,10 @@ object ExternalBaseIME {
 
     init {
         try {
-            val resourceNative = ResourceLocation("ingameime", "natives/jni.dll")
+            val constructor = ResourceLocation::class.java.getDeclaredConstructor(String::class.java, String::class.java)
+            constructor.isAccessible = true
+            val resourceNative = constructor.newInstance("ingameime", "natives/jni.dll")
+//            val resourceNative = ResourceLocation("ingameime", "natives/jni.dll")
             NativeLoader.load(Minecraft.getInstance().resourceManager.getResource(resourceNative).orElseThrow())
             LOGGER.debug("Initialing window")
             nInitialize(glfwGetWin32Window(Minecraft.getInstance().window.window))

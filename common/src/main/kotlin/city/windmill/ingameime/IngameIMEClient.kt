@@ -41,7 +41,7 @@ object IngameIMEClient {
                 prevY = mouseY
             }
 
-            OverlayScreen.render(matrices, mouseX, mouseY, delta)
+            OverlayScreen.render(matrices, mouseX, mouseY, delta.realtimeDeltaTicks)
         })
         ClientScreenEventHooks.SCREEN_MOUSE_MOVE.register(ClientScreenEventHooks.MouseMove { _, _, _, _ ->
             IMEHandler.IMEState.onMouseMove()
