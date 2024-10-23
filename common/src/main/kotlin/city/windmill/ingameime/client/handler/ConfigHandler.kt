@@ -7,7 +7,6 @@ import com.google.gson.GsonBuilder
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import com.google.gson.stream.JsonReader
 import me.shedaniel.clothconfig2.api.ConfigBuilder
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.components.EditBox
@@ -88,18 +87,21 @@ object ConfigHandler {
         readConfig()
     }
 
-    fun loadDefaultConfig() {
+    private fun loadDefaultConfig() {
         disableIMEInCommandMode = true
         autoReplaceSlashChar = true
         slashCharArray = charArrayOf('、')
     }
 
-    fun readConfig() {
+    private fun readConfig() {
         try {
-            JsonParser().parse(JsonReader(config.reader())).apply {
+            JsonParser.parseReader(config.reader()).apply {
                 disableIMEInCommandMode = (this as JsonObject).get("disableIMEInCommandMode").asBoolean
                 autoReplaceSlashChar = this.get("autoReplaceSlashChar").asBoolean
-                slashCharArray = this.get("slashChars").asJsonArray.map { it.asCharacter }.toCharArray()
+                slashCharArray = this.get("slashChars")
+                    .asJsonArray
+                    .mapNotNull { it.asString.firstOrNull() }
+                    .toCharArray()
             }
         } catch (e: Exception) {
             LOGGER.warn("Failed to read config:", e)
@@ -109,7 +111,7 @@ object ConfigHandler {
         saveConfig()
     }
 
-    fun saveConfig() {
+    private fun saveConfig() {
         config.outputStream(
             StandardOpenOption.CREATE,
             StandardOpenOption.TRUNCATE_EXISTING,

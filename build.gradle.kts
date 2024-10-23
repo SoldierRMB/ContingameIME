@@ -2,10 +2,10 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     java
-    id("architectury-plugin") version "3.4.155"
-    id("dev.architectury.loom") version "1.6.395" apply false
-    id("me.shedaniel.unified-publishing") version "0.1.12" apply false
-    kotlin("jvm") version "2.0.0" apply false
+    id("architectury-plugin")
+    id("dev.architectury.loom") apply false
+    id("me.shedaniel.unified-publishing") apply false
+    kotlin("jvm") apply false
 }
 
 architectury {

@@ -26,6 +26,7 @@ object KeyHandler {
     
     enum class KeyState {
         PENDING_KEY_DOWN {
+            @OptIn(DelicateCoroutinesApi::class)
             override fun onKeyDown(keyCode: Int, scanCode: Int, modifier: Int): KeyState {
                 val longPressRepeat = GlobalScope.launch(start = CoroutineStart.LAZY) {
                     var longPressCounter = 0
@@ -66,7 +67,7 @@ object KeyHandler {
             override fun onKeyUp(keyCode: Int, scanCode: Int, modifier: Int): KeyState {
                 delayLongPress.get()?.cancel()
                 longPressRepeat.get()?.cancel() //may have started
-                LOGGER.trace("${KeyAction.KEY_CLICKED}")
+                LOGGER.trace("{}", KeyAction.KEY_CLICKED)
                 onAction(KeyAction.KEY_CLICKED)
                 return PENDING_KEY_DOWN
             }
@@ -125,6 +126,7 @@ object KeyHandler {
     
     enum class CombinationKeyState {
         PENDING_CLICK {
+            @OptIn(DelicateCoroutinesApi::class)
             override fun onAction(action: KeyState.KeyAction): CombinationKeyState {
                 return when (action) {
                     KeyState.KeyAction.KEY_CLICKED -> {

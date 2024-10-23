@@ -35,7 +35,7 @@ repositories {
 
 dependencies {
     //Fabric
-    modImplementation("net.fabricmc:fabric-loader:${rootProject.property("fabric_loader_version")}")
+    modImplementation("net.fabricmc:fabric-loader:${rootProject.property("loader_version")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${rootProject.property("fabric_version")}")
     //Cloth Api? "The Cloth API has largely been replaced by the Architectury API."
     //Architectury API
@@ -57,10 +57,17 @@ dependencies {
 
 tasks {
     processResources {
-        inputs.property("version", project.version)
+        val version: String by project
+        val minecraft_version: String by project
+
+        inputs.property("version", version)
+        inputs.property("minecraft_version", minecraft_version)
 
         filesMatching("fabric.mod.json") {
-            expand("version" to project.version)
+            expand(
+                "version" to version,
+                "minecraft_version" to minecraft_version
+            )
         }
     }
 
