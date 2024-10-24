@@ -24,4 +24,4 @@ pluginManagement {
 include("common")
 include("fabric")
 
-rootProject.name = "ContingameIME"
+rootProject.name = "ContingameIMESuper"

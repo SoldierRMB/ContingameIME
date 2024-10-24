@@ -2,9 +2,9 @@
 
 <img height="150" width="150" src="icon/400x400.png"/>
 
-# ContingameIME
+# ContingameIMESuper
 
-[IngameIME](https://github.com/Windmill-City/IngameIME-Minecraft) 的非官方续更版。在全屏的Minecraft中使用输入法。
+[ContingameIME](https://github.com/ThinkingStudios/ContingameIME) 的非官方续更版。在全屏的Minecraft中使用输入法。
 
 ZH-CN / [EN-US](README-EN.md)
 

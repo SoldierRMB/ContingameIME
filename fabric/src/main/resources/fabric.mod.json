@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "id": "ingameime",
   "version": "${version}",
-  "name": "ContingameIME",
+  "name": "ContingameIMESuper",
   "description": "An unofficial continuation of IngameIME.\nEnable IME in FullScreen Minecraft",
   "authors": [
     "ThinkingStudio, TexTrue, Wybxc", "Windmill_City"
   ],
   "contact": {
-    "sources": "https://github.com/ThinkingStudios/ContingameIME",
-    "issues": "https://github.com/ThinkingStudios/ContingameIME/issues"
+    "sources": "https://github.com/SoldierRMB/ContingameIMESuper",
+    "issues": "https://github.com/SoldierRMB/ContingameIMESuper/issues"
   },
   "license": "LGPL-3.0",
   "icon": "icon.png",

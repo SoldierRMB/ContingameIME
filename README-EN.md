@@ -2,9 +2,9 @@
 
 <img height="150" width="150" src="icon/400x400.png"/>
 
-# ContingameIME
+# ContingameIMESuper
 
-An unofficial continuation of [IngameIME](https://github.com/Windmill-City/IngameIME-Minecraft). Use input method in full screen Minecraft.
+An unofficial continuation of [ContingameIME](https://github.com/ThinkingStudios/ContingameIME). Use input method in full screen Minecraft.
 
 [ZH-CN](README.md) / EN-US
 
@@ -42,5 +42,6 @@ An unofficial continuation of [IngameIME](https://github.com/Windmill-City/Ingam
 
 # This mod code reference/use
 
+- [ThinkingStudios/ContingameIME](https://github.com/ThinkingStudios/ContingameIME) (LGPL-2.1)
 - [Windmill-City/IngameIME-Minecraft](https://github.com/Windmill-City/IngameIME-Minecraft) (LGPL-2.1)
 - [Wybxc/IngameIME-Minecraft](https://github.com/Wybxc/IngameIME-Minecraft) (LGPL-2.1)
