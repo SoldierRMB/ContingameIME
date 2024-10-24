@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "ingameime",
+  "id": "contingameimesuper",
   "version": "${version}",
   "name": "ContingameIMESuper",
-  "description": "An unofficial continuation of IngameIME.\nEnable IME in FullScreen Minecraft",
+  "description": "An unofficial continuation of ContingameIME.\nEnable IME in FullScreen Minecraft",
   "authors": [
-    "ThinkingStudio, TexTrue, Wybxc", "Windmill_City"
+    "SoldierRMB", "ThinkingStudio, TexTrue, Wybxc", "Windmill_City"
   ],
   "contact": {
     "sources": "https://github.com/SoldierRMB/ContingameIMESuper",
@@ -24,7 +24,7 @@
   },
   "mixins": [
     {
-      "config": "ingameime.fabric.mixins.json",
+      "config": "contingameimesuper.fabric.mixins.json",
       "environment": "client"
     }
   ],

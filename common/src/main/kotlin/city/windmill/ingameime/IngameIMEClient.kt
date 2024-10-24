@@ -15,8 +15,8 @@ import net.minecraft.client.Minecraft
 import org.slf4j.LoggerFactory
 
 object IngameIMEClient {
-    const val MODNAME = "ContingameIME"
-    const val MODID = "ingameime"
+    const val MODNAME = "ContingameIMESuper"
+    const val MODID = "contingameimesuper"
     val LOGGER = LoggerFactory.getLogger(MODNAME)
     /**
      * Track mouse move
