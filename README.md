@@ -41,5 +41,6 @@ ZH-CN / [EN-US](README-EN.md)
 ### 该模组需要VCRuntime141运行，请在微软的官方网站上下载  [下载链接](https://learn.microsoft.com/zh-CN/cpp/windows/latest-supported-vc-redist)
 
 # 代码使用/引用
+- [ThinkingStudios/ContingameIME](https://github.com/ThinkingStudios/ContingameIME) (LGPL-2.1)
 - [Windmill-City/IngameIME-Minecraft](https://github.com/Windmill-City/IngameIME-Minecraft) (LGPL-2.1)
 - [Wybxc/IngameIME-Minecraft](https://github.com/Wybxc/IngameIME-Minecraft) (LGPL-2.1)
